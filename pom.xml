@@ -4,41 +4,32 @@
   <artifactId>test-lib</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>Test Lib</name>
+  <packaging>jar</packaging>
   
-  <activeProfiles>
-    <activeProfile>github</activeProfile>
-  </activeProfiles>
+	<properties>
+     <maven.compiler.source>1.8</maven.compiler.source>
+     <maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+  
+	<distributionManagement>
+	  <repository>
+	    <id>github</id>
+	    <url>https://maven.pkg.github.com/onesimeallaphie/test-lib</url>
+	    <snapshots>
+	    <enabled>true</enabled>
+	    </snapshots>
+	  </repository>
+	</distributionManagement>
+	
+	<dependencies>
+	<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+	<dependency>
+		<groupId>org.projectlombok</groupId>
+		<artifactId>lombok</artifactId>
+		<version>1.18.24</version>
+		<scope>provided</scope>
+	</dependency>
+	
+	</dependencies>
 
-<distributionManagement>
-  <repository>
-    <id>github</id>
-    <url>https://maven.pkg.github.com/onesimeallaphie/test-lib</url>
-    <snapshots>
-    <enabled>true</enabled>
-    </snapshots>
-  </repository>
-</distributionManagement>
-
-  <profiles>
-    <profile>
-      <id>github</id>
-      <repositories>
-        <repository>
-          <id>github</id>
-          <url>https://maven.pkg.github.com/onesimeallaphie/test-lib</url>
-          <snapshots>
-            <enabled>true</enabled>
-          </snapshots>
-        </repository>
-      </repositories>
-    </profile>
-  </profiles>
-
-  <servers>
-    <server>
-      <id>github</id>
-      <username>onesimeallaphie</username>
-      <password>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</password>
-    </server>
-  </servers>
 </project>
