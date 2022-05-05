@@ -4,4 +4,41 @@
   <artifactId>test-lib</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>Test Lib</name>
+  
+  <activeProfiles>
+    <activeProfile>github</activeProfile>
+  </activeProfiles>
+
+<distributionManagement>
+  <repository>
+    <id>github</id>
+    <url>https://maven.pkg.github.com/onesimeallaphie/test-lib</url>
+    <snapshots>
+    <enabled>true</enabled>
+    </snapshots>
+  </repository>
+</distributionManagement>
+
+  <profiles>
+    <profile>
+      <id>github</id>
+      <repositories>
+        <repository>
+          <id>github</id>
+          <url>https://maven.pkg.github.com/onesimeallaphie/test-lib</url>
+          <snapshots>
+            <enabled>true</enabled>
+          </snapshots>
+        </repository>
+      </repositories>
+    </profile>
+  </profiles>
+
+  <servers>
+    <server>
+      <id>github</id>
+      <username>onesimeallaphie</username>
+      <password>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</password>
+    </server>
+  </servers>
 </project>
